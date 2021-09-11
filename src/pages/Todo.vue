@@ -46,7 +46,6 @@
           side>
           <q-btn 
             @click.stop="deleteTask(index)"
-            :click="confirm"
             flat 
             round 
             dense
