@@ -12,29 +12,29 @@
         dense>
         <template v-slot:append>
           <q-btn
-            @click="addTask" 
+            @click="addTask"
             round
             dense
             flat
             icon="add" />
-        </template>    
+        </template>
       </q-input>
       </div>
-    <q-list 
+    <q-list
       class="bg-white"
       separator
       bordered
       >
       <q-item
-        @click="task.done != task.done"
+        @click="task.done !== task.done"
         :class="{ 'done bg-blue-1': task.done }"
         clickable
-        v-for="(task, index) in tasks" 
+        v-for="(task, index) in tasks"
         :key="task.title"
         v-ripple>
         <q-item-section avatar>
-          <q-checkbox 
-            v-model="task.done" 
+          <q-checkbox
+            v-model="task.done"
             class="no-pointer-events."
             color="primary" />
         </q-item-section>
@@ -44,12 +44,12 @@
         <q-item-section
           v-if="task.done"
           side>
-          <q-btn 
+          <q-btn
             @click.stop="deleteTask(index)"
-            flat 
-            round 
+            flat
+            round
             dense
-            color="primary" 
+            color="primary"
             icon="delete" />
 
         </q-item-section>
@@ -58,7 +58,7 @@
     <div
       v-if="!tasks.length"
       class="no-tasks absolute-center">
-      <q-icon 
+      <q-icon
         name="check"
         size="100px"
         color="primary" />
@@ -76,20 +76,7 @@ export default defineComponent({
   data() {
     return{
       newTask: '',
-       tasks: [
-      //   {
-      //     title: 'Get Bananas',
-      //     done: false
-      //   },
-      //   {
-      //     title: 'Eat Bananas',
-      //     done: false
-      //   },
-      //   {
-      //     title: 'Poop Bananas',
-      //     done: false
-      //   }
-      ]
+       tasks: []
     }
   },
   methods: {
