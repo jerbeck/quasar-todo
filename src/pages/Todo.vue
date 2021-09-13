@@ -51,7 +51,6 @@
             dense
             color="primary"
             icon="delete" />
-
         </q-item-section>
       </q-item>
     </q-list>

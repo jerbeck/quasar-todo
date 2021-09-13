@@ -15,23 +15,23 @@
           <div class="text-h3">Todo</div>
           <div class="text-subtitle1">{{ todaysDate }}</div>
       </div>
-      <q-img 
+      <q-img
         src="../statics/mountains.jpg"
         class="header-image absolute-top" />
     </q-header>
 
-<q-drawer
-        v-model="leftDrawerOpen"
-        show-if-above
-        :width="250"
-        :breakpoint="600"
+    <q-drawer
+      v-model="leftDrawerOpen"
+      show-if-above
+      :width="250"
+      :breakpoint="600"
       >
         <q-scroll-area style="height: calc(100% - 192px); margin-top: 192px; border-right: 1px solid #ddd">
           <q-list padding>
             <q-item
-              to="/" 
+              to="/"
               exact
-              clickable 
+              clickable
               v-ripple>
               <q-item-section avatar>
                 <q-icon name="list" />
@@ -42,10 +42,10 @@
               </q-item-section>
             </q-item>
 
-            <q-item 
+            <q-item
               to="/help"
               exact
-              clickable 
+              clickable
               v-ripple>
               <q-item-section avatar>
                 <q-icon name="help" />
